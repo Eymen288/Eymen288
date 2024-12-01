@@ -1,0 +1,23 @@
+import tkinter as tk
+root = tk.Tk()
+def isim():
+    meta1.config(text=entry)
+def evet():
+    meta2.config(text="NO you didnt becuse this version is first version",foreground="red",background="black")
+def hayir():
+    meta2.config(text="this is true becuse this is first version",foreground="green",background="black")
+meta1 = tk.Label(text="HELLO USER !",background="black",foreground="white")
+meta1.pack()
+write=tk.Label(text="can you say me your name?")
+write.pack()
+name=tk.Entry()
+name.pack()
+meta2 = tk.Label(text="did you use this app")
+meta2.pack()
+buton1 = tk.Button(text="YES",foreground="white",background="green",command=evet)
+buton1.pack()
+buton2=tk.Button(text="NO",foreground="white",background="red",command=hayir)
+buton2.pack()
+buton3=tk.Button(text="my name is",command=isim)
+buton3.pack()
+root.mainloop()
